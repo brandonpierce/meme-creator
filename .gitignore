@@ -5,3 +5,5 @@ doc/app
 db/*.sqlite3
 *~
 .sass-cache
+.bundle
+
