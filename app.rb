@@ -12,11 +12,6 @@ require "rack-cache"
 require "timeout"
 require "shellwords"
 
-if ENV['RACK_ENV'] == 'production'
-  use Rack::Auth::Basic, "Restricted Area" do |username, password|
-    username == ENV['memegen_username'] and password == ENV['memegen_password']
-  end
-end
 
 AVAILABLE_MEMES = YAML.load_file("memes.yml")
 
