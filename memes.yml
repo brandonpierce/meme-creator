@@ -77,6 +77,12 @@ grumpycat:
   :alias: grumpy
   :top: i made a meme creator once
   :bottom: it was terrible
+koala:
+  :name: Surprised Koala
+  :width: 500
+  :alias: koala
+  :top: Oh Noes
+  :bottom: I made a meme creator
 mostinterestingman:
   :name: Most Interesting Man
   :width: 380
