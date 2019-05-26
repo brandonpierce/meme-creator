@@ -5,6 +5,12 @@ aliensguy:
   :alias: aliens
   :top:  
   :bottom: meme creators
+allthethings:
+  :name: ALL THE THINGS
+  :width: 650
+  :alias: allthethings
+  :top: automate
+  :bottom: all the things
 braceyourself:
   :name: Brace Yourself
   :width: 400
@@ -71,6 +77,12 @@ grumpycat:
   :alias: grumpy
   :top: i made a meme creator once
   :bottom: it was terrible
+koala:
+  :name: Surprised Koala
+  :width: 500
+  :alias: koala
+  :top: Oh Noes
+  :bottom: I made a meme creator
 mostinterestingman:
   :name: Most Interesting Man
   :width: 380
@@ -83,6 +95,12 @@ onedoesnotsimply:
   :alias: simply
   :top: one does not simply
   :bottom: build a meme creator
+orly:
+  :name: ORLY?
+  :width: 438
+  :alias: orly
+  :top: making a meme
+  :bottom: orly?
 overlyattachedgirlfriend:
   :name: Overly Attached Girlfriend
   :width: 470

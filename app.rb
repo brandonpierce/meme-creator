@@ -11,6 +11,7 @@ require "rack-cache"
 require "timeout"
 require "shellwords"
 
+
 AVAILABLE_MEMES = YAML.load_file("memes.yml")
 
 ALIASED_MEMES = AVAILABLE_MEMES.inject({}) { |h, e| h[e[1][:alias].to_s] = e[0]; h }
@@ -23,11 +24,18 @@ ERROR_MESSAGES = {
 
 MC = ENV["MEMCACHIER_SERVERS"] || "localhost:11211"
 
-use Rack::Cache, {
-  :verbose => true,
-  :metastore => "memcached://#{MC}",
-  :entitystore => "memcached://#{MC}"
-}
+if ENV['RACK_ENV'] == 'production'
+  use Rack::Cache, {
+    :verbose => true,
+    :metastore => "memcached://#{MC}",
+    :entitystore => "memcached://#{MC}"
+  }
+else
+  use Rack::Cache,
+    :metastore   => 'heap:/',
+    :entitystore => 'heap:/'
+end
+
 
 class NotAnImageException < StandardError; end
 
